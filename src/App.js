@@ -1,9 +1,9 @@
 import "./App.scss";
 
 import { Canvas } from "@react-three/fiber";
-import Box from "./mesh/Box";
-
 import { softShadows, OrbitControls } from "@react-three/drei";
+
+import Box from "./mesh/Box";
 softShadows();
 
 function App() {
@@ -11,7 +11,7 @@ function App() {
     <>
       <Canvas
         shadows
-        colorManagement
+        colorManagement={false}
         camera={{ position: [-5, 2, 10], fov: 60 }}
       >
         <ambientLight intensity={0.3} />
